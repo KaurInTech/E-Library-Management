@@ -1,0 +1,383 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E2C1F83A-F9B1-4E99-986A-78470F475E03}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ELibraryManagement</RootNamespace>
+    <AssemblyName>ELibraryManagement</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44380</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Bootstrap\css\bootstrap.min.css" />
+    <Content Include="Bootstrap\js\bootstrap.min.js" />
+    <Content Include="Bootstrap\js\jquery-3.3.1.slim.min.js" />
+    <Content Include="Bootstrap\js\popper.min.js" />
+    <Content Include="css\customstylesheet.css" />
+    <Content Include="datatables\css\dataTables.dataTables.min.css" />
+    <Content Include="datatables\js\dataTables.min.js" />
+    <Content Include="fontawesome\css\all.css" />
+    <Content Include="fontawesome\css\all.min.css" />
+    <Content Include="fontawesome\css\brands.css" />
+    <Content Include="fontawesome\css\brands.min.css" />
+    <Content Include="fontawesome\css\fontawesome.css" />
+    <Content Include="fontawesome\css\fontawesome.min.css" />
+    <Content Include="fontawesome\css\regular.css" />
+    <Content Include="fontawesome\css\regular.min.css" />
+    <Content Include="fontawesome\css\solid.css" />
+    <Content Include="fontawesome\css\solid.min.css" />
+    <Content Include="fontawesome\css\svg-with-js.css" />
+    <Content Include="fontawesome\css\svg-with-js.min.css" />
+    <Content Include="fontawesome\css\v4-font-face.css" />
+    <Content Include="fontawesome\css\v4-font-face.min.css" />
+    <Content Include="fontawesome\css\v4-shims.css" />
+    <Content Include="fontawesome\css\v4-shims.min.css" />
+    <Content Include="fontawesome\css\v5-font-face.css" />
+    <Content Include="fontawesome\css\v5-font-face.min.css" />
+    <Content Include="fontawesome\js\all.js" />
+    <Content Include="fontawesome\js\all.min.js" />
+    <Content Include="fontawesome\js\brands.js" />
+    <Content Include="fontawesome\js\brands.min.js" />
+    <Content Include="fontawesome\js\conflict-detection.js" />
+    <Content Include="fontawesome\js\conflict-detection.min.js" />
+    <Content Include="fontawesome\js\fontawesome.js" />
+    <Content Include="fontawesome\js\fontawesome.min.js" />
+    <Content Include="fontawesome\js\regular.js" />
+    <Content Include="fontawesome\js\regular.min.js" />
+    <Content Include="fontawesome\js\solid.js" />
+    <Content Include="fontawesome\js\solid.min.js" />
+    <Content Include="fontawesome\js\v4-shims.js" />
+    <Content Include="fontawesome\js\v4-shims.min.js" />
+    <Content Include="fontawesome\LICENSE.txt" />
+    <Content Include="fontawesome\sprites\brands.svg" />
+    <Content Include="fontawesome\sprites\regular.svg" />
+    <Content Include="fontawesome\sprites\solid.svg" />
+    <Content Include="fontawesome\svgs\brands\42-group.svg" />
+    <Content Include="fontawesome\svgs\brands\500px.svg" />
+    <Content Include="fontawesome\svgs\brands\accessible-icon.svg" />
+    <Content Include="fontawesome\svgs\brands\accusoft.svg" />
+    <Content Include="fontawesome\svgs\brands\adn.svg" />
+    <Content Include="fontawesome\svgs\brands\adversal.svg" />
+    <Content Include="fontawesome\svgs\brands\affiliatetheme.svg" />
+    <Content Include="fontawesome\svgs\brands\airbnb.svg" />
+    <Content Include="fontawesome\svgs\brands\algolia.svg" />
+    <Content Include="fontawesome\svgs\brands\alipay.svg" />
+    <Content Include="fontawesome\svgs\brands\amazon-pay.svg" />
+    <Content Include="fontawesome\svgs\brands\amazon.svg" />
+    <Content Include="fontawesome\svgs\brands\amilia.svg" />
+    <Content Include="fontawesome\svgs\brands\android.svg" />
+    <Content Include="fontawesome\svgs\brands\angellist.svg" />
+    <Content Include="fontawesome\svgs\brands\angrycreative.svg" />
+    <Content Include="fontawesome\svgs\brands\angular.svg" />
+    <Content Include="fontawesome\svgs\brands\app-store-ios.svg" />
+    <Content Include="fontawesome\svgs\brands\app-store.svg" />
+    <Content Include="fontawesome\svgs\brands\apper.svg" />
+    <Content Include="fontawesome\svgs\brands\apple-pay.svg" />
+    <Content Include="fontawesome\svgs\brands\apple.svg" />
+    <Content Include="fontawesome\svgs\brands\artstation.svg" />
+    <Content Include="fontawesome\svgs\brands\asymmetrik.svg" />
+    <Content Include="fontawesome\svgs\brands\atlassian.svg" />
+    <Content Include="fontawesome\svgs\brands\audible.svg" />
+    <Content Include="fontawesome\svgs\brands\autoprefixer.svg" />
+    <Content Include="fontawesome\svgs\brands\avianex.svg" />
+    <Content Include="fontawesome\svgs\brands\aviato.svg" />
+    <Content Include="fontawesome\svgs\brands\aws.svg" />
+    <Content Include="fontawesome\svgs\brands\bandcamp.svg" />
+    <Content Include="fontawesome\svgs\brands\battle-net.svg" />
+    <Content Include="fontawesome\svgs\brands\behance.svg" />
+    <Content Include="fontawesome\svgs\brands\bilibili.svg" />
+    <Content Include="fontawesome\svgs\brands\bimobject.svg" />
+    <Content Include="fontawesome\svgs\brands\bitbucket.svg" />
+    <Content Include="fontawesome\svgs\brands\bitcoin.svg" />
+    <Content Include="fontawesome\svgs\brands\bity.svg" />
+    <Content Include="fontawesome\svgs\brands\black-tie.svg" />
+    <Content Include="fontawesome\svgs\brands\blackberry.svg" />
+    <Content Include="fontawesome\svgs\brands\blogger-b.svg" />
+    <Content Include="fontawesome\svgs\brands\blogger.svg" />
+    <Content Include="fontawesome\svgs\brands\bluesky.svg" />
+    <Content Include="fontawesome\svgs\brands\bluetooth-b.svg" />
+    <Content Include="fontawesome\svgs\brands\bluetooth.svg" />
+    <Content Include="fontawesome\svgs\brands\bootstrap.svg" />
+    <Content Include="fontawesome\svgs\brands\bots.svg" />
+    <Content Include="fontawesome\svgs\brands\brave-reverse.svg" />
+    <Content Include="fontawesome\svgs\brands\brave.svg" />
+    <Content Include="fontawesome\svgs\brands\btc.svg" />
+    <Content Include="fontawesome\svgs\brands\buffer.svg" />
+    <Content Include="fontawesome\svgs\brands\buromobelexperte.svg" />
+    <Content Include="fontawesome\svgs\brands\buy-n-large.svg" />
+    <Content Include="fontawesome\svgs\brands\buysellads.svg" />
+    <Content Include="fontawesome\svgs\brands\canadian-maple-leaf.svg" />
+    <Content Include="fontawesome\svgs\brands\cc-amazon-pay.svg" />
+    <Content Include="fontawesome\svgs\brands\cc-amex.svg" />
+    <Content Include="fontawesome\svgs\brands\cc-apple-pay.svg" />
+    <Content Include="fontawesome\svgs\brands\cc-diners-club.svg" />
+    <Content Include="fontawesome\svgs\brands\cc-discover.svg" />
+    <Content Include="fontawesome\svgs\brands\cc-jcb.svg" />
+    <Content Include="fontawesome\svgs\brands\cc-mastercard.svg" />
+    <Content Include="fontawesome\svgs\brands\cc-paypal.svg" />
+    <Content Include="fontawesome\svgs\brands\cc-stripe.svg" />
+    <Content Include="fontawesome\svgs\brands\cc-visa.svg" />
+    <Content Include="fontawesome\svgs\brands\centercode.svg" />
+    <Content Include="fontawesome\svgs\brands\centos.svg" />
+    <Content Include="fontawesome\svgs\brands\chrome.svg" />
+    <Content Include="fontawesome\svgs\brands\chromecast.svg" />
+    <Content Include="fontawesome\svgs\brands\cloudflare.svg" />
+    <Content Include="fontawesome\svgs\brands\cloudscale.svg" />
+    <Content Include="fontawesome\svgs\brands\cloudsmith.svg" />
+    <Content Include="fontawesome\svgs\brands\cloudversify.svg" />
+    <Content Include="fontawesome\svgs\brands\cmplid.svg" />
+    <Content Include="fontawesome\svgs\brands\codepen.svg" />
+    <Content Include="fontawesome\svgs\brands\codiepie.svg" />
+    <Content Include="fontawesome\svgs\brands\confluence.svg" />
+    <Content Include="fontawesome\svgs\brands\connectdevelop.svg" />
+    <Content Include="fontawesome\svgs\brands\contao.svg" />
+    <Content Include="fontawesome\svgs\brands\cotton-bureau.svg" />
+    <Content Include="fontawesome\svgs\brands\cpanel.svg" />
+    <Content Include="fontawesome\svgs\brands\creative-commons-by.svg" />
+    <Content Include="fontawesome\svgs\brands\creative-commons-nc-eu.svg" />
+    <Content Include="fontawesome\svgs\brands\creative-commons-nc-jp.svg" />
+    <Content Include="fontawesome\svgs\brands\creative-commons-nc.svg" />
+    <Content Include="fontawesome\svgs\brands\creative-commons-nd.svg" />
+    <Content Include="fontawesome\svgs\brands\creative-commons-pd-alt.svg" />
+    <Content Include="fontawesome\svgs\brands\creative-commons-pd.svg" />
+    <Content Include="fontawesome\svgs\brands\creative-commons-remix.svg" />
+    <Content Include="fontawesome\svgs\brands\creative-commons-sa.svg" />
+    <Content Include="fontawesome\svgs\brands\creative-commons-sampling-plus.svg" />
+    <Content Include="fontawesome\svgs\brands\creative-commons-sampling.svg" />
+    <Content Include="fontawesome\svgs\brands\creative-commons-share.svg" />
+    <Content Include="fontawesome\svgs\brands\creative-commons-zero.svg" />
+    <Content Include="fontawesome\svgs\brands\creative-commons.svg" />
+    <Content Include="fontawesome\svgs\brands\critical-role.svg" />
+    <Content Include="fontawesome\svgs\brands\css3-alt.svg" />
+    <Content Include="fontawesome\svgs\brands\css3.svg" />
+    <Content Include="fontawesome\svgs\brands\cuttlefish.svg" />
+    <Content Include="fontawesome\svgs\brands\d-and-d-beyond.svg" />
+    <Content Include="fontawesome\svgs\brands\d-and-d.svg" />
+    <Content Include="fontawesome\svgs\brands\dailymotion.svg" />
+    <Content Include="fontawesome\svgs\brands\dashcube.svg" />
+    <Content Include="fontawesome\svgs\brands\debian.svg" />
+    <Content Include="fontawesome\svgs\brands\deezer.svg" />
+    <Content Include="fontawesome\svgs\brands\delicious.svg" />
+    <Content Include="fontawesome\svgs\brands\deploydog.svg" />
+    <Content Include="fontawesome\svgs\brands\deskpro.svg" />
+    <Content Include="fontawesome\svgs\brands\dev.svg" />
+    <Content Include="fontawesome\svgs\brands\deviantart.svg" />
+    <Content Include="fontawesome\svgs\brands\dhl.svg" />
+    <Content Include="fontawesome\svgs\brands\diaspora.svg" />
+    <Content Include="fontawesome\svgs\brands\digg.svg" />
+    <Content Include="fontawesome\svgs\brands\digital-ocean.svg" />
+    <Content Include="fontawesome\svgs\brands\discord.svg" />
+    <Content Include="fontawesome\svgs\brands\discourse.svg" />
+    <Content Include="fontawesome\svgs\brands\dochub.svg" />
+    <Content Include="fontawesome\svgs\brands\docker.svg" />
+    <Content Include="fontawesome\svgs\brands\draft2digital.svg" />
+    <Content Include="fontawesome\svgs\brands\dribbble.svg" />
+    <Content Include="fontawesome\svgs\brands\dropbox.svg" />
+    <Content Include="fontawesome\svgs\brands\drupal.svg" />
+    <Content Include="fontawesome\svgs\brands\dyalog.svg" />
+    <Content Include="fontawesome\svgs\brands\earlybirds.svg" />
+    <Content Include="fontawesome\svgs\brands\ebay.svg" />
+    <Content Include="fontawesome\svgs\brands\edge-legacy.svg" />
+    <Content Include="fontawesome\svgs\brands\edge.svg" />
+    <Content Include="fontawesome\svgs\brands\elementor.svg" />
+    <Content Include="fontawesome\svgs\brands\ello.svg" />
+    <Content Include="fontawesome\svgs\brands\ember.svg" />
+    <Content Include="fontawesome\svgs\brands\empire.svg" />
+    <Content Include="fontawesome\svgs\brands\envira.svg" />
+    <Content Include="fontawesome\svgs\brands\erlang.svg" />
+    <Content Include="fontawesome\svgs\brands\ethereum.svg" />
+    <Content Include="fontawesome\svgs\brands\etsy.svg" />
+    <Content Include="fontawesome\svgs\brands\evernote.svg" />
+    <Content Include="fontawesome\svgs\brands\expeditedssl.svg" />
+    <Content Include="fontawesome\svgs\brands\facebook-f.svg" />
+    <Content Include="fontawesome\svgs\brands\facebook-messenger.svg" />
+    <Content Include="fontawesome\svgs\brands\facebook.svg" />
+    <Content Include="fontawesome\svgs\brands\fantasy-flight-games.svg" />
+    <Content Include="imgs\adminuser.png" />
+    <Content Include="imgs\book-online.png" />
+    <Content Include="imgs\books.png" />
+    <Content Include="imgs\books1.png" />
+    <Content Include="imgs\defaulters-list.png" />
+    <Content Include="imgs\digital-data.png" />
+    <Content Include="imgs\digital-inventory.png" />
+    <Content Include="imgs\generaluser.png" />
+    <Content Include="imgs\home-bg.jpg" />
+    <Content Include="imgs\in-homepage-banner.jpg" />
+    <Content Include="imgs\library.png" />
+    <Content Include="imgs\publisher.png" />
+    <Content Include="imgs\search-online.png" />
+    <Content Include="imgs\sign-up.png" />
+    <Content Include="imgs\writer.png" />
+    <Content Include="Web.config" />
+    <Content Include="WebForm1.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Site1.Master.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site1.Master.designer.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fontawesome\less\brands.less" />
+    <Content Include="fontawesome\less\fontawesome.less" />
+    <Content Include="fontawesome\less\regular.less" />
+    <Content Include="fontawesome\less\solid.less" />
+    <Content Include="fontawesome\less\v4-shims.less" />
+    <Content Include="fontawesome\less\_animated.less" />
+    <Content Include="fontawesome\less\_bordered-pulled.less" />
+    <Content Include="fontawesome\less\_core.less" />
+    <Content Include="fontawesome\less\_fixed-width.less" />
+    <Content Include="fontawesome\less\_icons.less" />
+    <Content Include="fontawesome\less\_list.less" />
+    <Content Include="fontawesome\less\_mixins.less" />
+    <Content Include="fontawesome\less\_rotated-flipped.less" />
+    <Content Include="fontawesome\less\_screen-reader.less" />
+    <Content Include="fontawesome\less\_shims.less" />
+    <Content Include="fontawesome\less\_sizing.less" />
+    <Content Include="fontawesome\less\_stacked.less" />
+    <Content Include="fontawesome\less\_variables.less" />
+    <Content Include="fontawesome\metadata\categories.yml" />
+    <Content Include="fontawesome\metadata\icon-families.json" />
+    <Content Include="fontawesome\metadata\icon-families.yml" />
+    <Content Include="fontawesome\metadata\icons.json" />
+    <Content Include="fontawesome\metadata\icons.yml" />
+    <Content Include="fontawesome\metadata\shims.json" />
+    <Content Include="fontawesome\metadata\shims.yml" />
+    <Content Include="fontawesome\metadata\sponsors.yml" />
+    <Content Include="fontawesome\scss\brands.scss" />
+    <Content Include="fontawesome\scss\fontawesome.scss" />
+    <Content Include="fontawesome\scss\regular.scss" />
+    <Content Include="fontawesome\scss\solid.scss" />
+    <Content Include="fontawesome\scss\v4-shims.scss" />
+    <Content Include="fontawesome\scss\_animated.scss" />
+    <Content Include="fontawesome\scss\_bordered-pulled.scss" />
+    <Content Include="fontawesome\scss\_core.scss" />
+    <Content Include="fontawesome\scss\_fixed-width.scss" />
+    <Content Include="fontawesome\scss\_functions.scss" />
+    <Content Include="fontawesome\scss\_icons.scss" />
+    <Content Include="fontawesome\scss\_list.scss" />
+    <Content Include="fontawesome\scss\_mixins.scss" />
+    <Content Include="fontawesome\scss\_rotated-flipped.scss" />
+    <Content Include="fontawesome\scss\_screen-reader.scss" />
+    <Content Include="fontawesome\scss\_shims.scss" />
+    <Content Include="fontawesome\scss\_sizing.scss" />
+    <Content Include="fontawesome\scss\_stacked.scss" />
+    <Content Include="fontawesome\scss\_variables.scss" />
+    <None Include="packages.config" />
+    <Content Include="Site1.Master" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>51958</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44380/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
